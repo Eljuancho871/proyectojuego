@@ -1,0 +1,355 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    transition: transform 0.2s linear 0.2s;
+    transition: text-shadow 0.2s linear 0.2s;
+    overflow: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-family: 'Slackey', serif;
+    font-size: 50px;
+    overflow: visible;
+}
+
+.section-presentacion{
+    background-image: url("./img/la-tierra.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.botones-modo-juego{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: visible;
+    z-index: 10;
+}
+
+.botones-modo-juego label{
+    margin-bottom: 50px;
+    width: 260px;
+    overflow: visible;
+    z-index: 10;
+}
+
+.botones-modo-juego label button{
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 2px 2px white;
+    font-size: 20px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    font-family: cursive;
+    font-weight: 900;
+}
+
+#btn-solitario{
+    background-color: #fe672f;
+}
+
+#btn-multijugador{
+    background-color: yellow;
+}
+
+#btn-multijugador, #btn-solitario{
+    width: 100%;
+    justify-content:left;
+    animation-duration: 1s;
+    animation-name: scale-btn;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state: paused;
+}
+
+#btn-solitario:hover{
+    animation-play-state: running;
+}
+
+#btn-multijugador:hover{
+    animation-play-state: running;
+}
+
+.img-btn{
+    width: 50px;
+    padding: 3px;
+    margin-right: 10px;
+    background-color: #f1835b;
+    border-radius: 100%;
+}
+
+.mas{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.mas ul{
+    display: flex;
+}
+
+.mas ul li{
+    margin: 20px;
+}
+
+.imagen-mas{
+    width: 30px;
+    cursor: pointer;
+}
+
+.blue{
+    color: rgb(24 61 207);
+    margin-right: 10px;
+    text-shadow: rgb(51 77 163)  0px 0px 12px;
+    cursor: default;
+    overflow: visible;
+}
+
+.text-img h1{
+    overflow: visible;
+    font-size: 50px;
+    width: 100%;
+    color: transparent;
+    background-image: url('./img/universo.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: rgb(51 77 163)  0px 0px 12px;
+    cursor: default;
+}
+
+.text-img{
+    overflow: visible;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.fa-instagram{
+    font-size: 25px;
+    color: orangered;
+}
+
+.fa-instagram:hover{
+    transform: scale(1.5);
+}
+
+.fa-gear{
+    font-size: 25px;
+    color: #464c50;
+    cursor: pointer;
+}
+
+.fa-gear:hover{
+    transform: scale(1.5);
+}
+
+.fa-chrome{
+    font-size: 25px;
+    color: #229342;
+}
+
+.fa-chrome:hover{
+    transform: scale(1.5);
+}
+
+@keyframes scale-btn {
+    from {
+        transform: scale(1.0);
+    }
+  
+    to {
+        transform: scale(1.1);
+    }
+  }
+
+.imgFlotando{
+    transition: top 0.01s linear 0.01s;
+    position: absolute;
+}
+
+.fuera{
+    left: 500px;
+    top: 500px;
+}
+
+.z-index10{
+    z-index: 10;
+}
+
+.capa{
+    background-color: transparent;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+  body{
+    background: #1b2123;
+  }
+
+  .loaderSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1b2123;
+    transition: opacity .5s linear 0.5s;
+    width: 100%;
+    position: absolute;
+  }
+
+.loaderText{
+    margin-bottom: 25px;
+    color: whitesmoke;
+    font-family: cursive;
+}
+.opacidad0{
+    opacity: 0;
+}
+
+.yoImg{
+    width: 25%;
+}
+
+.textYO{
+    color: whitesmoke;
+    font-family: cursive;
+}
+
+@media (max-width: 730px) {
+    
+    .title {
+        flex-direction: column;
+        font-size: 25px;
+        text-align: center;
+    }
+    .text-img h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .yoImg {
+        width: 60%;
+    }
+    .textYO {
+        font-size: 12px;
+        text-align: center;
+    }
+    .capa {
+        padding: 10px;
+    }
+    .mas ul li {
+        margin: 5px;
+    }
+    #btn-multijugador, #btn-solitario {
+        font-size: 13px;
+        height: 50px;
+    }
+    .botones-modo-juego label {
+        width: 185px;
+    }
+    .title {
+        margin: 5px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}
