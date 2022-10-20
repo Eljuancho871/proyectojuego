@@ -150,7 +150,7 @@ const iniciarJuego = () => {
 
         let nuevaImagen2 = new ImagenClass()
         nuevaImagen2.crear_desplazar_imagen("60px", "100", "5")
-    }, 3000)
+    }, 2000)
 }
 
 

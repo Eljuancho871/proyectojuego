@@ -59,7 +59,7 @@ li{
     align-self: center;
     align-content: center;
     display: flex;
-    font-family: cursive;
+    font-family: 'Dosis', sans-serif;
     font-weight: 900;
 }
 
@@ -300,7 +300,7 @@ li{
 .loaderText{
     margin-bottom: 25px;
     color: whitesmoke;
-    font-family: cursive;
+    font-family: 'Dosis', sans-serif;
 }
 .opacidad0{
     opacity: 0;
@@ -312,7 +312,7 @@ li{
 
 .textYO{
     color: whitesmoke;
-    font-family: cursive;
+    font-family: 'Dosis', sans-serif;
 }
 
 @media (max-width: 730px) {
